@@ -1,0 +1,11 @@
+node_modules/
+.next/
+dist/
+pnpm-lock.yaml
+.env*
+.DS_Store
+coverage/
+.turbo/
+clear/
+git add --all
+npm_workspace_protocol_fix.zip

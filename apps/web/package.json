@@ -1,0 +1,29 @@
+{
+  "name": "web",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "next": "14.2.8",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "^3.4.14",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20",
+    "@ac/core": "file:../../packages/core",
+    "@ac/usecase-solo-buy": "file:../../packages/usecase-solo-buy",
+    "@ac/usecase-group-buy": "file:../../packages/usecase-group-buy",
+    "@ac/usecase-exchange": "file:../../packages/usecase-exchange",
+    "@ac/usecase-rescue": "file:../../packages/usecase-rescue",
+    "@ac/usecase-ai-craft": "file:../../packages/usecase-ai-craft",
+    "@ac/usecase-maintenance": "file:../../packages/usecase-maintenance",
+    "zustand": "^4.5.2"
+  }
+}

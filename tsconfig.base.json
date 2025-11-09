@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ac/core/*": [
+        "packages/core/src/*"
+      ],
+      "@ac/usecase-solo-buy/*": [
+        "packages/usecase-solo-buy/src/*"
+      ],
+      "@ac/usecase-group-buy/*": [
+        "packages/usecase-group-buy/src/*"
+      ],
+      "@ac/usecase-exchange/*": [
+        "packages/usecase-exchange/src/*"
+      ],
+      "@ac/usecase-rescue/*": [
+        "packages/usecase-rescue/src/*"
+      ],
+      "@ac/usecase-ai-craft/*": [
+        "packages/usecase-ai-craft/src/*"
+      ],
+      "@ac/usecase-maintenance/*": [
+        "packages/usecase-maintenance/src/*"
+      ]
+    }
+  }
+}

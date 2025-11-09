@@ -1,0 +1,10 @@
+{
+  "name": "@ac/usecase-rescue",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ac/core": "file:../core",
+    "zustand": "^4.5.2"
+  }
+}
