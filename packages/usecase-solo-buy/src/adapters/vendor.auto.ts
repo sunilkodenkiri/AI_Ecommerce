@@ -11,9 +11,8 @@ export const autoVendor: VendorPort = {
     setTimeout(() => {
       if (locksRegistry.isLocked(sessionId)) return;
       if (slots <= 0) return;
-      slots--;
 
-      // Aggressive mood: undercut harder
+      // compute offer first
       const under = 8 + Math.floor(sim.rng() * 14);
       const price = Math.max(priceHint - under, 469);
 
@@ -21,6 +20,9 @@ export const autoVendor: VendorPort = {
       const deliveryFee = 25;
       const slaTier = "STANDARD" as const;
       const reliability = 0.88;
+
+      // decrement only when we're actually going to emit an offer
+      slots--;
 
       bus.emit(Topics.VendorOffer, {
         sessionId,

@@ -11,7 +11,6 @@ export const hybridVendor: VendorPort = {
     setTimeout(() => {
       if (locksRegistry.isLocked(sessionId)) return;
       if (slots <= 0) return;
-      slots--;
 
       // Balanced mood: small undercut unless hint too low
       const floor = 480;
@@ -24,6 +23,9 @@ export const hybridVendor: VendorPort = {
       const deliveryFee = 39;
       const slaTier = "EXPRESS" as const;
       const reliability = 0.92;
+
+      // decrement only when offer will be emitted
+      slots--;
 
       bus.emit(Topics.VendorOffer, {
         sessionId,
